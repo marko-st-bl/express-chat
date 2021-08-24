@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="token-form-container">
+        <form class="token-form" method="POST" action="/token">
+            <h2>Token</h2>
+            <div class="form-control">
+                <label for="token">Enter token sent to your email.</label>
+                <input type="number" name="token" id="">
+            </div>
+            <div class="error-message"><%= err %></div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
