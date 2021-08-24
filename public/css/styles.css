@@ -141,12 +141,14 @@ input[type='number']:focus, .register-form input[type=text]:focus{
 	margin-bottom: 7px;
 }
 
-.meta span {
-    padding-left: 15px;
+.message-content {
+    display: flex;
+    flex-direction: row;
 }
 
 .message-text{
     padding: 10px;
+    margin-left: 15px;
 	margin-bottom: 15px;
 	background-color: var(--wash);
 	border-radius: 15px;
@@ -158,6 +160,17 @@ input[type='number']:focus, .register-form input[type=text]:focus{
     height: calc(100% - var(--newMessageHeight));
     background-color: var(--primaryColor);
     color: var(--onPrimary);
+}
+
+.online-users li {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .messages{
@@ -227,6 +240,10 @@ button[type='submit'] {
 
 .user-selected {
     background-color: var(--wash);
+}
+
+.user-name {
+    margin-left: 10px;
 }
 
 .user-selected .user-name{

@@ -70,14 +70,14 @@ socket.on('connect_error', (err) => {
 const addMessageToDOM = (message) => {
     var newMessage = document.createElement('div');
     newMessage.classList.add('message');
-    newMessage.innerHTML = `<p class='meta'>${message.from.name}<span>${message.time}</span></p><div class='message-text'>${message.message}</div>`
+    newMessage.innerHTML = `<p class='meta'><span>${message.time}</span></p><div class="message-content"><img class="avatar" src="https://avatars.dicebear.com/api/initials/${message.from.name}.svg"/><div class='message-text'>${message.message}</div></div>`
     messages.appendChild(newMessage);
 }
 
 const addUserToDOM = (user) => {
     let li = document.createElement('li');
     li.id = user._id;
-    li.innerHTML = `<div class='user-name'>${user.name}</div>`
+    li.innerHTML = `<img class="avatar" src="https://avatars.dicebear.com/api/initials/${user.name}.svg"/> <div class='user-name'>${user.name}</div>`
     li.addEventListener('click', () => {
         let selected = document.querySelector('.user-selected');
         if(selected){
