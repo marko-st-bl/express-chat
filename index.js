@@ -78,7 +78,6 @@ app.use(sessionMiddlware);
 
 // Validate request params for SQLI and XSS attacks
 app.use((req, res, next) => {
-  console.log(req.client.authorized)
   for(var prop in req.query){
     if(validator.detectMalicious(req.query[prop])){
       console.log('ATTACK DETECTED!');

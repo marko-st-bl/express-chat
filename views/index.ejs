@@ -4,25 +4,27 @@
 
     <body>
         <%- include('./partials/nav.ejs') %>
-        <div class="chat-container">
-            <div class="messages">
-                <!-- MESSAGE TEMPLATE
-                 <div class="message">
-                    <p class="meta">Marko Stojanovic<span>14:23</span></p>
-                    <div class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed debitis cum corporis, sint facere consequatur optio exercitationem sequi. Hic odio voluptates ut. Ipsam iste optio quisquam sunt molestiae laudantium nesciunt.</div>
-                </div> -->
-            </div>
-            <div class="users">
-                <ul class="online-users"></ul>
-            </div>
-            <form class="new-message-form" action="">
-                <div class="new-message-container">
-                    <input class="message-input" type="text" placeholder="Type your message here..." />
-                    <!-- <a id="submit-btn" href=""><img class="send-icon" src="/send.png" alt=""></a> -->
-                    <button type="submit"><img class="send-icon" src="/send.png" alt=""/></button>
+        <main>
+            <div class="chat-container">
+                <div class="messages">
+                    <!-- MESSAGE TEMPLATE
+                     <div class="message">
+                        <p class="meta">Marko Stojanovic<span>14:23</span></p>
+                        <div class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed debitis cum corporis, sint facere consequatur optio exercitationem sequi. Hic odio voluptates ut. Ipsam iste optio quisquam sunt molestiae laudantium nesciunt.</div>
+                    </div> -->
                 </div>
-            </form>
-        </div>
+                <div class="users">
+                    <ul class="online-users"></ul>
+                </div>
+                <form class="new-message-form" action="">
+                    <div class="new-message-container">
+                        <input class="message-input" type="text" placeholder="Type your message here..." />
+                        <!-- <a id="submit-btn" href=""><img class="send-icon" src="/send.png" alt=""></a> -->
+                        <button type="submit" aria-label="send-button"><img class="send-icon" src="/send.png" alt=""/></button>
+                    </div>
+                </form>
+            </div>
+        </main>
         <script src="/socket.io/socket.io.js"></script>
         <script src="./js/main.js"></script>
     </body>

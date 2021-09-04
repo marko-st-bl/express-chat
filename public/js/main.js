@@ -77,7 +77,7 @@ const addMessageToDOM = (message) => {
 const addUserToDOM = (user) => {
     let li = document.createElement('li');
     li.id = user._id;
-    li.innerHTML = `<img class="avatar" src="https://avatars.dicebear.com/api/initials/${user.name}.svg"/> <div class='user-name'>${user.name}</div>`
+    li.innerHTML = `<img class="avatar" src="https://avatars.dicebear.com/api/initials/${user.name}.svg" alt="avatar"/> <div class='user-name'>${user.name}</div>`
     li.addEventListener('click', () => {
         let selected = document.querySelector('.user-selected');
         if(selected){

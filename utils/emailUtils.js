@@ -1,16 +1,14 @@
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 
-console.log(process.env.MAIL_USER);
-
 async function sendEmail(email, code){
   
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.MAIL_USER, // generated ethereal user
-        pass: process.env.MAIL_PASS, // generated ethereal password
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
       },
     });
   
@@ -24,8 +22,6 @@ async function sendEmail(email, code){
   
     console.log("Email sent: %s", info.messageId);
   
-    // Preview only available when sending through an Ethereal account
-    //console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   }
 
   module.exports = {
