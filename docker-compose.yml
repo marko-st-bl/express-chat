@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  mongo:
+    image: mongo:5.0.2
+    restart: unless-stopped
+    container_name: mongo
+    ports:
+      - 27017:27017
+    
+
+  web:
+    depends_on:
+      - mongo
+    restart: unless-stopped
+    build: .
+    container_name: sni-chat
+    restart: always
+    ports:
+      - "8080:4000"
+    external_links:
+      - mongo
+    stdin_open: true
+    tty: true
+    env_file: ./.env
+    volumes:
+      - .:/srv/chat
+
+volumes:
+  db:

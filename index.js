@@ -39,7 +39,7 @@ cert: fs.readFileSync('./pki/server/sni-chat.crt', 'utf8'),
 requestCert: true,
 rejectUnauthorized: true,
 ca: fs.readFileSync('./pki/ca/rootCA.crt'),
-crl: fs.readFileSync('./pki/crl/CRL.pem')
+//crl: fs.readFileSync('./pki/crl/CRL.pem')
 }, app);
 
 // Setting up session middleware

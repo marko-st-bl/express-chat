@@ -5,10 +5,20 @@
    step 2: client certificate
    step 3: token sent to email that expires after three minutes. 
    Application also detecets and blocks any malicious users that attempt attacks (XSS, Injection, etc...)
-2. ## Requirements
-   1. Node.js v16.6
-   2. MongoDB server
-3. ## Instalation
-   npm install
-4. ## Preview
+2. ## Installation
+   1. Create **.env** file in root folder
+   ```
+   PORT=4000
+   MONGO_DB_HOST=mongodb://mongo:27017/sni-chat
+   SECRET=secret
+   MAIL_USER=test@gmail.com
+   MAIL_PASS=password
+   ```
+   Here, you just need to change MAIL_USER and MAIL_PASS variables with your own.
+   
+   2. Open terminal in root folder of app and run following command.
+   ```bash
+   docker-compose up -d
+   ```
+1. ## Preview
    ![Preview](preview/sni.png)
